@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<p class="first second third">
+		Lorem ipsum dolor sit.
+	</p>
+
+	<!-- 
+    Задание.
+    1. Назначьте обработку клика по параграфу, у функции обработчика объявите
+    параметр event.
+    2. При клике выведите в консоль event.target.classList
+    3. Переберите с помощью forEach event.target.classList и выведите каждый класс
+    в консоль.
+    -->
+
+	<script>
+		'use strict';
+
+		let paragraph = document.querySelector('p');
+		paragraph.forEach(function (p) {
+			p.addEventListener('click', paragraphClickHandler);
+		});
+
+		function paragraphClickHandler(event) {
+			console.log(event.target.classList);
+		}
+
+
+
+
+		let p = document.querySelector('p');
+		p.addEventListener('click', function (event) {
+			console.log(event.target.classList);
+			event.target.classList.forEach(function (klass) {
+				console.log(klass);
+			});
+		});
+
+
+
+		// const buttons = document.querySelectorAll('button');
+		// buttons.forEach(function (button) {
+		// 	button.addEventListener('click', buttonClickHandler);
+		// });
+
+		// function buttonClickHandler(event) {
+		// 	console.log(event);//объект с информацией о событии
+		// 	console.log(event.target);//элемент на котором произошло событие
+		// 	console.log(event.target.tagName);//имя тега на котором произошло событие
+		// 	console.log(event.target.textContent);//текст в элементе
+		// 	console.log(event.target.classList);//список классов
+		// 	console.log(event.target.id);//id элемента
+		// 	console.log(event.target.getAttribute('data-someAttr'));
+
+	</script>
+</body>
+
+</html>
