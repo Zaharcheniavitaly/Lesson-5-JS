@@ -23,9 +23,14 @@
 		let oneEll = document.getElementsByClassName('one');
 		for (let i = 0; i < oneEll.length; i++) {
 			console.log(oneEll[i].tagName);
-
 		}
 
+		// или так!!!
+
+		let oneEllAll = document.querySelectorAll('.one');
+		oneEllAll.forEach(oneEl => {
+			console.log(oneEl.tagName);
+		});
 
 	</script>
 </body>
