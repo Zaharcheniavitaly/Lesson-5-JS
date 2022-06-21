@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<a href="#">ссылка</a>
+	<a href="#"></a>
+	<a href="#">ссылка</a>
+	<a href="#"></a>
+
+	<!-- Задание.
+    1. Получите все ссылки.
+    2. Проверьте, есть ли в ссылке текст "ссылка", и если нет, то добавьте. -->
+
+	<script>
+		'use strict';
+
+		let aEll = document.querySelectorAll('a');
+		for (let i = 0; i < document.links.length; i++) {
+			if (document.link[i].innerText !== 'ссылка') {
+				document.link[i].innerText = 'ссылка';
+			}
+		};
+
+
+
+		// Почему не работает ТАК???????????
+
+		let aEllems = document.querySelectorAll('a');
+		console.log(aEllems);
+		aEllems.forEach(links => {
+
+			if (document.links.innerText !== 'ссылка') {
+				document.links.innerText = 'ссылка';
+			}
+			console.log(links.innerText);
+		});
+
+	</script>
+</body>
+
+</html>
