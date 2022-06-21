@@ -25,40 +25,16 @@
 		'use strict';
 
 		let paragraph = document.querySelector('p');
-		paragraph.forEach(function (p) {
-			p.addEventListener('click', paragraphClickHandler);
-		});
 
-		function paragraphClickHandler(event) {
+		paragraph.addEventListener('click', function (event) {
 			console.log(event.target.classList);
-		}
-
-
-
-
-		let p = document.querySelector('p');
-		p.addEventListener('click', function (event) {
-			console.log(event.target.classList);
-			event.target.classList.forEach(function (klass) {
-				console.log(klass);
+			event.target.classList.forEach(classLs => {
+				console.log(classLs);
 			});
 		});
 
 
 
-		// const buttons = document.querySelectorAll('button');
-		// buttons.forEach(function (button) {
-		// 	button.addEventListener('click', buttonClickHandler);
-		// });
-
-		// function buttonClickHandler(event) {
-		// 	console.log(event);//объект с информацией о событии
-		// 	console.log(event.target);//элемент на котором произошло событие
-		// 	console.log(event.target.tagName);//имя тега на котором произошло событие
-		// 	console.log(event.target.textContent);//текст в элементе
-		// 	console.log(event.target.classList);//список классов
-		// 	console.log(event.target.id);//id элемента
-		// 	console.log(event.target.getAttribute('data-someAttr'));
 
 	</script>
 </body>
