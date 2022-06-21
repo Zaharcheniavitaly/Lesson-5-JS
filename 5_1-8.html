@@ -24,6 +24,29 @@
 		'use strict';
 
 		let bTagEll = document.querySelectorAll('b');
+		console.log(bTagEll);
+
+		for (let i = 0; i < bTagEll.length; i++) {
+			console.log(bTagEll[i]);
+
+			if (!bTagEll[i].classList.contains('sign')) {
+				bTagEll[i].classList.add('sign');
+			}
+		}
+
+
+
+		// или так:
+		let bTagEll2 = document.querySelectorAll('b');
+		console.log(bTagEll2);
+		bTagEll.forEach(elSing => {
+			console.log(elSing);
+
+			if (!elSing.classList.contains('sign')) {
+				elSing.classList.add('sign');
+			}
+			console.log(elSing);
+		});
 
 
 	</script>
